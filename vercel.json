@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build:fast",
+  "installCommand": "npm install --prefer-offline --no-audit",
+  "env": {
+    "OMNIROUTE_USE_TURBOPACK": "0",
+    "OMNIROUTE_SKIP_STANDALONE": "1",
+    "OMNIROUTE_BUILD_MEMORY_MB": "4096",
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "NEXT_TELEMETRY_DISABLED": "1"
+  },
+  "build": {
+    "env": {
+      "OMNIROUTE_USE_TURBOPACK": "0",
+      "OMNIROUTE_SKIP_STANDALONE": "1",
+      "OMNIROUTE_BUILD_MEMORY_MB": "4096",
+      "NODE_OPTIONS": "--max-old-space-size=4096",
+      "NEXT_TELEMETRY_DISABLED": "1"
+    }
+  }
+}
