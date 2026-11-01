@@ -6,8 +6,8 @@
     "OMNIROUTE_USE_TURBOPACK": "0",
     "OMNIROUTE_SKIP_STANDALONE": "1",
     "OMNIROUTE_BUILD_BACKEND_ONLY": "1",
-    "OMNIROUTE_BUILD_MEMORY_MB": "6144",
-    "NODE_OPTIONS": "--max-old-space-size=6144",
+    "OMNIROUTE_BUILD_MEMORY_MB": "4096",
+    "NODE_OPTIONS": "--max-old-space-size=4096",
     "NEXT_TELEMETRY_DISABLED": "1"
   },
   "build": {
@@ -15,8 +15,8 @@
       "OMNIROUTE_USE_TURBOPACK": "0",
       "OMNIROUTE_SKIP_STANDALONE": "1",
       "OMNIROUTE_BUILD_BACKEND_ONLY": "1",
-      "OMNIROUTE_BUILD_MEMORY_MB": "6144",
-      "NODE_OPTIONS": "--max-old-space-size=6144",
+      "OMNIROUTE_BUILD_MEMORY_MB": "4096",
+      "NODE_OPTIONS": "--max-old-space-size=4096",
       "NEXT_TELEMETRY_DISABLED": "1"
     }
   }

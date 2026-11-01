@@ -1,0 +1,15 @@
+# Vercel build context — mirror .dockerignore essentials to keep the build small.
+node_modules
+.next
+.build
+dist
+coverage
+tests
+test-results
+docs/i18n
+electron
+.source
+.claude
+.agents
+._tasks
+_*

@@ -190,7 +190,7 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   // Issue #67: enable React Compiler — automates memoization, removes manual useCallback/useMemo debt.
   // See: https://next.dev/blog/react-compiler
-  reactCompiler: true,
+  reactCompiler: process.env.OMNIROUTE_BUILD_BACKEND_ONLY === "1" ? false : true,
   // OmniRoute is a proxy for AI APIs — request bodies routinely include
   // multi-MB payloads (vision models, image edits, base64-encoded files,
   // long chat histories with embedded images). Next.js's Server Action
@@ -206,6 +206,9 @@ const nextConfig = {
     },
     // Reduce peak heap during production builds (Next.js 15+).
     webpackMemoryOptimizations: true,
+    // Scale static-generation workers by free memory instead of a fixed 4,
+    // lowering peak memory on the 8 GB Vercel build container.
+    memoryBasedWorkersCount: true,
     // Run webpack in a separate Node worker, lowering main-process memory.
     webpackBuildWorker: true,
     // Next.js proxy (middleware) has a default 10MB body clone limit. File
